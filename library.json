@@ -1,12 +1,12 @@
 {
-    "name": "A320 Components",
+    "name": "A320 Core",
     "version": "1.0.0",
     "description": "Composants partagés entre les différents modules du cockpit",
     "keywords": "a320, cockpit",
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/username/hello-world.git"
+      "url": "https://github.com/rguilbeau/A320_Core"
     },
     "authors":
     [
