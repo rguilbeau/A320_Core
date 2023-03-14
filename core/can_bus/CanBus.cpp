@@ -24,7 +24,6 @@ void CanBus::loop()
         // ERROR_FAILINIT  = 3
         // ERROR_FAILTX    = 4
         // ERROR_NOMSG     = 5
-        //SERIAL_PRINTLN("Can bus message failed. errno:" + String(error));
     } else if (error == MCP2515::ERROR_OK) {
 
         Frame frame(_can_frame->can_id, _can_frame->can_dlc);
