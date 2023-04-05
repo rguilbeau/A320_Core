@@ -2,7 +2,7 @@
 #define A320_DISPLAYER_H
 
 #include "Arduino.h"
-#include "lib/Adafruit_SSD1306/Adafruit_SSD1306.h"
+#include "core/displayer/lib/Adafruit_SSD1306/Adafruit_SSD1306.h"
 #include "core/displayer/fonts/Nimbus_Sans_L_Bold_16.h"
 #include "core/displayer/fonts/DSEG7_Classic_Mini_Bold_25.h"
 
