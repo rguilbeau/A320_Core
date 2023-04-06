@@ -12,7 +12,7 @@ public:
     CanBus(uint8_t cs, CanBusFrameEvent *event);
     void begin();
     void send(Frame *frame);
-    void loop();
+    bool loop();
 
 private:
     CanBusFrameEvent *_event;

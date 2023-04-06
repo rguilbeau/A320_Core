@@ -13,8 +13,10 @@ void CanBus::begin()
     _mcp2515->setNormalMode();
 }
 
-void CanBus::loop()
+bool CanBus::loop()
 {
+    bool eventFired = false;
+
     MCP2515::ERROR error = _mcp2515->readMessage(_can_frame);
 
     if(error != MCP2515::ERROR_OK && error != MCP2515::ERROR_NOMSG) {
@@ -34,8 +36,11 @@ void CanBus::loop()
 
         if(_event != nullptr) {
             _event->frameReceived(&frame);
+            eventFired = true;
         }
     }
+
+    return eventFired;
 }
 
 void CanBus::send(Frame *frame)
