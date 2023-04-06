@@ -17,7 +17,7 @@ bool CanBus::loop()
 {
     bool eventFired = false;
 
-    MCP2515::ERROR error = _mcp2515->readMessage(_can_frame);
+    MCP2515::ERROR error = _mcp2515->readMessage(&_mcp_can_frame);
 
     if(error != MCP2515::ERROR_OK && error != MCP2515::ERROR_NOMSG) {
         // ERROR_OK        = 0
@@ -28,10 +28,10 @@ bool CanBus::loop()
         // ERROR_NOMSG     = 5
     } else if (error == MCP2515::ERROR_OK) {
 
-        Frame frame(_can_frame->can_id, _can_frame->can_dlc);
+        Frame frame(_mcp_can_frame.can_id, _mcp_can_frame.can_dlc);
     
-        for(unsigned short i = 0; i < _can_frame->can_dlc; i++) {
-            frame.setData(i, _can_frame->data[i]);
+        for(unsigned short i = 0; i < _mcp_can_frame.can_dlc; i++) {
+            frame.setData(i, _mcp_can_frame.data[i]);
         }
 
         if(_event != nullptr) {

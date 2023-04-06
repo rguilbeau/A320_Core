@@ -17,8 +17,7 @@ public:
 private:
     CanBusFrameEvent *_event;
     MCP2515 *_mcp2515;
-    can_frame *_can_frame;
-    
+    struct can_frame _mcp_can_frame; 
 };
 
 #endif
