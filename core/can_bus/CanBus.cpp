@@ -55,3 +55,19 @@ void CanBus::send(Frame *frame)
 
     _mcp2515->sendMessage(&can_frame);
 }
+
+void CanBus::sendEvent(unsigned short idEvent, float data)
+{
+    Frame frame(0x000, 6);
+    frame.setData(0, (idEvent >> 8) & 0xFF);
+    frame.setData(1, idEvent & 0xFF);
+
+    byte octets[4];
+    memcpy(octets, &data, sizeof(data));
+
+    for (int i = 0; i < 4; i++) {
+        frame.setData(2 + i, octets[i]);
+    }
+
+    send(&frame);
+}

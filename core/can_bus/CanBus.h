@@ -13,7 +13,8 @@ public:
     void begin();
     void send(Frame *frame);
     bool loop();
-
+    void sendEvent(unsigned short idEvent, float data);
+    
 private:
     CanBusFrameEvent *_event;
     MCP2515 *_mcp2515;
