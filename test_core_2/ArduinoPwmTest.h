@@ -1,5 +1,5 @@
-#ifndef A320_ARDUINO_PWM_H
-#define A320_ARDUINO_PWM_H
+#ifndef A320_ARDUINO_PWM_TEST_H
+#define A320_ARDUINO_PWM_TEST_H
 
 #include "Arduino.h"
 
