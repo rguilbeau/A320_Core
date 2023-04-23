@@ -2,9 +2,9 @@
 #define A320_BUTTON_H
 
 #include "Arduino.h"
-#include "A320_Coreihm/IhmInterface.h"
-#include "A320_Coreinput/InputInterface.h"
-#include "A320_Coreevent/ButtonEvent.h"
+#include "A320_Core/ihm/IhmInterface.h"
+#include "A320_Core/input/InputInterface.h"
+#include "A320_Core/event/ButtonEvent.h"
 
 class Button : public IhmInterface {
 

@@ -2,7 +2,7 @@
 #define A320_LIGHT_H
 
 #include "Arduino.h"
-#include "A320_Coreoutput/OutputInterface.h"
+#include "A320_Core/output/OutputInterface.h"
 
 class Light {
 

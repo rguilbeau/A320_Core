@@ -2,9 +2,9 @@
 #define A320_ROTARY_H
 
 #include "Arduino.h"
-#include "A320_Coreinput/InputInterface.h"
-#include "A320_Coreihm/IhmInterface.h"
-#include "A320_Coreevent/RotaryEvent.h"
+#include "A320_Core/input/InputInterface.h"
+#include "A320_Core/ihm/IhmInterface.h"
+#include "A320_Core/event/RotaryEvent.h"
 
 /*#define R_CW_FINAL 0x1
 #define R_CW_BEGIN 0x2

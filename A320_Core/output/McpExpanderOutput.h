@@ -2,8 +2,8 @@
 #define A320_MCP_EXPANDER_OUTPUT_H
 
 #include "Arduino.h"
-#include "A320_Coreoutput/OutputInterface.h"
-#include "A320_Coremcp_expander/McpExpander.h"
+#include "A320_Core/output/OutputInterface.h"
+#include "A320_Core/mcp_expander/McpExpander.h"
 
 class McpExpanderOutput: public OutputInterface {
 

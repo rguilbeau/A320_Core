@@ -1,7 +1,7 @@
 #ifndef FCU_CAN_BUS_FRAME_EVENT_H
 #define FCU_CAN_BUS_FRAME_EVENT_H
 
-#include "A320_Corecan_bus/Frame.h"
+#include "A320_Core/can_bus/Frame.h"
 
 class CanBusFrameEvent {
 

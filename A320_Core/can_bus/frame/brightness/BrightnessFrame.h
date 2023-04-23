@@ -2,7 +2,7 @@
 #define FCU_BRIGHTNESS_FRAME
 
 #include "Arduino.h"
-#include "A320_Corecan_bus/Frame.h"
+#include "A320_Core/can_bus/Frame.h"
 
 class BrightnessFrame {
 
