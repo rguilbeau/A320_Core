@@ -7,12 +7,19 @@
 class BrightnessFrame {
 
     public:
+        static const unsigned int ID = 0x001;
 
         BrightnessFrame();
 
         void decode(Frame *frame);
         
-        short fcuDisplayContrast;
+        bool testLight;
+        unsigned char segmentsScreens;
+        unsigned char glareshieldPanel;
+        unsigned char overheadPabel;
+        unsigned char pedestalPanel;
+        unsigned char indicators;
+        unsigned char buttons;
 };
 
 #endif

@@ -7,10 +7,12 @@
 class FcuDisplayFrame {
 
     public:
+        static const unsigned int ID = 0x101;
 
         FcuDisplayFrame();
 
         void decode(Frame *frame);
+        
 
         bool isMachSpeed;
         bool isTrackMode;
@@ -31,8 +33,7 @@ class FcuDisplayFrame {
         bool isSpeedDash;
         bool isHeadingDash;
         bool isAltitudeDash;
-        bool isVerticalSpeedDash;        
-
+        bool isVerticalSpeedDash;
 };
 
 #endif

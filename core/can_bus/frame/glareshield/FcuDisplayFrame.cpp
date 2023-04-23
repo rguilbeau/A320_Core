@@ -6,7 +6,6 @@
  */
 FcuDisplayFrame::FcuDisplayFrame()
 {
-
 }
 
 /**

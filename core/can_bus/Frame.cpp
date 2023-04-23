@@ -4,6 +4,10 @@ Frame::Frame(unsigned long id, uint8_t size)
 {
     _id = id;
     _size = size;
+
+    for(int i = 0; i < _size; i++) {
+        _data[i] = 0x0;
+    }
 }
 
 void Frame::setData(uint8_t position, unsigned char data)

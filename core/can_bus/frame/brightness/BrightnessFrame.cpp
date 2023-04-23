@@ -16,8 +16,11 @@ BrightnessFrame::BrightnessFrame()
  */
 void BrightnessFrame::decode(Frame *frame)
 {
-    fcuDisplayContrast = (short)frame->getData(0);
-    if(fcuDisplayContrast > 100) {
-        fcuDisplayContrast = 100;
-    }
+    testLight = frame->getBinary(0, 0);
+    segmentsScreens = frame->getData(1);
+    glareshieldPanel = frame->getData(2);
+    overheadPanem = frame->getData(3);
+    pedestalPanel = frame->getData(4);
+    indicators = frame->getData(5);
+    buttons = frame->getData(6);
 }
