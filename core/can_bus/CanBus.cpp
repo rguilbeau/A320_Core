@@ -20,8 +20,11 @@ void CanBus::begin(const unsigned long *ids, const unsigned short numIds)
 
     _mcp2515->setConfigMode();
 
+    _mcp2515->setFilterMask(MCP2515::MASK0, false, 0x7FF);
+    _mcp2515->setFilterMask(MCP2515::MASK1, false, 0x7FF);
+
     for (uint8_t i = 0; i < numIds; i++) {
-        _mcp2515->setFilter((MCP2515::RXF)i, false, ids[i]);
+        _mcp2515->setFilter((MCP2515::RXF)i, false, ids[i]);        
     }
 
     _mcp2515->setNormalMode();
