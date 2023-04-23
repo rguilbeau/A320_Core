@@ -2,9 +2,9 @@
 #define A320_SWITCH_H
 
 #include "Arduino.h"
-#include "core/input/InputInterface.h"
-#include "core/ihm/IhmInterface.h"
-#include "core/event/SwitchEvent.h"
+#include "A320_Coreinput/InputInterface.h"
+#include "A320_Coreihm/IhmInterface.h"
+#include "A320_Coreevent/SwitchEvent.h"
 
 class Switch : public IhmInterface {
 

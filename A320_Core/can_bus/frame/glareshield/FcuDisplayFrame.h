@@ -2,7 +2,7 @@
 #define FCU_DISPLAY_FRAME
 
 #include "Arduino.h"
-#include "core/can_bus/Frame.h"
+#include "A320_Corecan_bus/Frame.h"
 
 class FcuDisplayFrame {
 

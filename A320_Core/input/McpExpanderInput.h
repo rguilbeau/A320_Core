@@ -2,8 +2,8 @@
 #define A320_MCP_EXPANDER_INPUT_H
 
 #include "Arduino.h"
-#include "core/input/InputInterface.h"
-#include "core/mcp_expander/McpExpander.h"
+#include "A320_Coreinput/InputInterface.h"
+#include "A320_Coremcp_expander/McpExpander.h"
 
 class McpExpanderInput : public InputInterface {
 

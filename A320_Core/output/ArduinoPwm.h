@@ -2,7 +2,7 @@
 #define A320_ARDUINO_PWM_H
 
 #include "Arduino.h"
-#include "core/output/PwmInterface.h"
+#include "A320_Coreoutput/PwmInterface.h"
 
 class ArduinoPwm : public PwmInterface {
 

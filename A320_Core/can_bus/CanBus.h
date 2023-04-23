@@ -3,8 +3,8 @@
 
 #include "Arduino.h"
 #include "mcp2515.h"
-#include "core/can_bus/Frame.h"
-#include "core/event/CanBusFrameEvent.h"
+#include "A320_Corecan_bus/Frame.h"
+#include "A320_Coreevent/CanBusFrameEvent.h"
 
 class CanBus {
 
