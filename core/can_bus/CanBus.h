@@ -11,7 +11,7 @@ class CanBus {
 public:
     CanBus(uint8_t cs, CanBusFrameEvent *event);
     void begin();
-    void begin(unsigned long *ids, unsigned short numIds);
+    void begin(const unsigned long *ids, const unsigned short numIds);
 
     void send(Frame *frame);
     bool loop();

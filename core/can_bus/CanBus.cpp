@@ -13,7 +13,7 @@ void CanBus::begin()
     _mcp2515->setNormalMode();
 }
 
-void CanBus::begin(unsigned long *ids, unsigned short numIds)
+void CanBus::begin(const unsigned long *ids, const unsigned short numIds)
 {
     _mcp2515->reset();
     _mcp2515->setBitrate(CAN_125KBPS, MCP_8MHZ);
