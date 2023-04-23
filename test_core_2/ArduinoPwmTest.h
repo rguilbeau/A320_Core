@@ -6,7 +6,7 @@
 class ArduinoPwmTest {
 
 public:
-    ArduinoPwm(uint8_t pin);
+    ArduinoPwmTest(uint8_t pin);
 
     void write(unsigned char value);
 
