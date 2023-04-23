@@ -16,7 +16,7 @@ class BrightnessFrame {
         bool testLight;
         unsigned char segmentsScreens;
         unsigned char glareshieldPanel;
-        unsigned char overheadPabel;
+        unsigned char overheadPanel;
         unsigned char pedestalPanel;
         unsigned char indicators;
         unsigned char buttons;
