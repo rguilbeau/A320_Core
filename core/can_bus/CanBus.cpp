@@ -13,6 +13,20 @@ void CanBus::begin()
     _mcp2515->setNormalMode();
 }
 
+void CanBus::begin(unsigned int *ids, unsigned short numIds)
+{
+    _mcp2515->reset();
+    _mcp2515->setBitrate(CAN_125KBPS, MCP_8MHZ);
+
+    _mcp2515->setConfigMode();
+
+    for (uint8_t i = 0; i < numIds; i++) {
+        _mcp2515->setFilter((MCP2515::RXF)i, false, ids[i]);
+    }
+
+    _mcp2515->setNormalMode();
+}
+
 bool CanBus::loop()
 {
     bool eventFired = false;
