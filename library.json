@@ -1,6 +1,6 @@
 {
     "name": "A320 Core",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Composants partagés entre les différents modules du cockpit",
     "keywords": "a320, cockpit",
     "repository":
