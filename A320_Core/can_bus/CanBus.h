@@ -10,9 +10,7 @@
 class CanBus {
 
 public:
-    CanBus(uint8_t cs);
-
-    void setEventHandler(CanBusFrameEvent *event);
+    CanBus(uint8_t cs, CanBusFrameEvent *event);
     void begin();
     void begin(const unsigned long *ids, const unsigned short numIds);
 
