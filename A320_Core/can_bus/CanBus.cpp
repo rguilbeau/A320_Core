@@ -1,8 +1,13 @@
 #include "CanBus.h"
 
-CanBus::CanBus(uint8_t cs, CanBusFrameEvent *event)
+CanBus::CanBus(uint8_t cs)
 {
     _mcp2515 = new MCP2515(cs);
+    _event = nullptr;
+}
+
+void CanBus::setEventHandler(CanBusFrameEvent *event)
+{
     _event = event;
 }
 
