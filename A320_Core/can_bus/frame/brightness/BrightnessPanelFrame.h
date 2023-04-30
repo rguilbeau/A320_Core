@@ -1,20 +1,20 @@
-#ifndef A320_CORE_BRIGHTNESS_FRAME_H
-#define A320_CORE_BRIGHTNESS_FRAME_H
+#ifndef A320_CORE_BRIGHTNESS_PANEL_FRAME_H
+#define A320_CORE_BRIGHTNESS_PANEL_FRAME_H
 
 #include "Arduino.h"
 #include "A320_Core/can_bus/Frame.h"
 
-class BrightnessFrame {
+class BrightnessPanelFrame {
 
     public:
         static const unsigned int ID = 0x020;
 
-        BrightnessFrame();
+        BrightnessPanelFrame();
 
         void decode(Frame *frame);
         
-        bool testLight;
-        unsigned char segmentsScreens;
+        unsigned char fcuDisplay;
+        
         unsigned char glareshieldPanel;
         unsigned char overheadPanel;
         unsigned char pedestalPanel;

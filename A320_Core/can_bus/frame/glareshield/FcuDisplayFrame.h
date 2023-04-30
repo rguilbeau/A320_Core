@@ -22,7 +22,6 @@ class FcuDisplayFrame {
         bool isHeadingDot;
         bool isAltitudeDot;
         bool isVerticalSpeedPositive;
-        bool isPowerOn;
     
         float speed;
         unsigned short heading;
@@ -34,6 +33,8 @@ class FcuDisplayFrame {
         bool isHeadingDash;
         bool isAltitudeDash;
         bool isVerticalSpeedDash;
+
+        bool isTestLight;
 };
 
 #endif

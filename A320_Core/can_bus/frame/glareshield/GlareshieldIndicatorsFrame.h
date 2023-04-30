@@ -19,7 +19,6 @@ class GlareshieldIndicatorsFrame {
         bool loc;
         bool exped;
         bool appr;
-        bool isPowerOn;
 };
 
 #endif
