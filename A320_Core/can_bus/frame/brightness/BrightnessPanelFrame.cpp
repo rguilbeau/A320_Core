@@ -7,10 +7,9 @@ BrightnessPanelFrame::BrightnessPanelFrame()
 
 void BrightnessPanelFrame::decode(Frame *frame)
 {
-    fcuDisplay = frame->getData(0);
-    glareshieldPanel = frame->getData(1);
-    overheadPanel = frame->getData(2);
-    pedestalPanel = frame->getData(3);
-    indicators = frame->getData(4);
-    buttons = frame->getData(5);
+    glareshieldPanel = frame->getData(0);
+    overheadPanel = frame->getData(1);
+    pedestalPanel = frame->getData(2);
+    indicators = frame->getData(3);
+    buttons = frame->getData(4);
 }

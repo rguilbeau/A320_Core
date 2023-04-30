@@ -13,7 +13,6 @@ class BrightnessPanelFrame {
 
         void decode(Frame *frame);
         
-        unsigned char fcuDisplay;
         unsigned char glareshieldPanel;
         unsigned char overheadPanel;
         unsigned char pedestalPanel;
