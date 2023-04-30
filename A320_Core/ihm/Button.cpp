@@ -28,7 +28,7 @@ bool Button::loop()
     }
 }
 
-bool Button::ping()
+void Button::ping()
 {
     // do notthing
 }
