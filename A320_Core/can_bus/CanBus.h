@@ -18,7 +18,7 @@ public:
     void send(Frame *frame);
     bool loop();
     bool isPing();
-    void sendEvent(unsigned short idEvent, float data);
+    void sendEvent(unsigned short idEvent, float data, bool isPing);
 
 private:
     CanBusFrameEvent *_event;

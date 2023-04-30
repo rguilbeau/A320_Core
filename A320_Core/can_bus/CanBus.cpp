@@ -83,9 +83,9 @@ void CanBus::send(Frame *frame)
     _mcp2515->sendMessage(&can_frame);
 }
 
-void CanBus::sendEvent(unsigned short idEvent, float data)
+void CanBus::sendEvent(unsigned short idEvent, float data, bool isPing)
 {
-    Frame frame(0x000, 6);
+    Frame frame(0x000, 7);
     frame.setData(0, (idEvent >> 8) & 0xFF);
     frame.setData(1, idEvent & 0xFF);
 
@@ -96,5 +96,11 @@ void CanBus::sendEvent(unsigned short idEvent, float data)
         frame.setData(2 + i, octets[i]);
     }
 
+    if(isPing) {
+        frame.setData(6, 0x01);
+    } else {
+        frame.setData(6, 0x00);
+    }
+    
     send(&frame);
 }
