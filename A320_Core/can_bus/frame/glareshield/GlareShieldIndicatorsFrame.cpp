@@ -21,5 +21,4 @@ void GlareshieldIndicatorsFrame::decode(Frame *frame)
     loc = frame->getBinary(0, 3);
     exped = frame->getBinary(0, 4);
     appr = frame->getBinary(0, 5);
-    isPowerOn = frame->getBinary(0, 7);
 }

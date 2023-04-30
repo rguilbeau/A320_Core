@@ -16,11 +16,10 @@ BrightnessFrame::BrightnessFrame()
  */
 void BrightnessFrame::decode(Frame *frame)
 {
-    testLight = frame->getBinary(0, 0);
-    segmentsScreens = frame->getData(1);
-    glareshieldPanel = frame->getData(2);
-    overheadPanel = frame->getData(3);
-    pedestalPanel = frame->getData(4);
-    indicators = frame->getData(5);
-    buttons = frame->getData(6);
+    segmentsScreens = frame->getData(0);
+    glareshieldPanel = frame->getData(1);
+    overheadPanel = frame->getData(2);
+    pedestalPanel = frame->getData(3);
+    indicators = frame->getData(4);
+    buttons = frame->getData(5);
 }
