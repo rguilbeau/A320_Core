@@ -1,5 +1,4 @@
 #include "CanBus.h"
-#include "A320_Core/can_bus/frame/PingFrame.h"
 
 CanBus::CanBus(uint8_t cs, CanBusFrameEvent *event)
 {

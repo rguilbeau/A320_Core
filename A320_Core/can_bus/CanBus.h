@@ -5,6 +5,7 @@
 #include "Adafruit_BusIO_Register.h"
 #include "mcp2515.h"
 #include "A320_Core/can_bus/Frame.h"
+#include "A320_Core/can_bus/frame/ping/PingFrame.h"
 #include "A320_Core/event/CanBusFrameEvent.h"
 
 class CanBus {
