@@ -1,4 +1,5 @@
 #include "CanBus.h"
+#include "A320_Core/can_bus/frame/PingFrame.h"
 
 CanBus::CanBus(uint8_t cs, CanBusFrameEvent *event)
 {
@@ -46,21 +47,19 @@ bool CanBus::loop()
         // ERROR_FAILTX    = 4
         // ERROR_NOMSG     = 5
     } else if (error == MCP2515::ERROR_OK) {
-        
-        if(_mcp_can_frame.can_id == 0xFFF) {
-            _isPing = true;
+        Frame frame(_mcp_can_frame.can_id, _mcp_can_frame.can_dlc);
+
+        for(unsigned short i = 0; i < _mcp_can_frame.can_dlc; i++) {
+            frame.setData(i, _mcp_can_frame.data[i]);
+        }
+
+        if(_event != nullptr) {
+            _event->frameReceived(&frame);
             eventFired = true;
-        } else {
-            Frame frame(_mcp_can_frame.can_id, _mcp_can_frame.can_dlc);
+        }
 
-            for(unsigned short i = 0; i < _mcp_can_frame.can_dlc; i++) {
-                frame.setData(i, _mcp_can_frame.data[i]);
-            }
-
-            if(_event != nullptr) {
-                _event->frameReceived(&frame);
-                eventFired = true;
-            }
+        if(frame.getId() == PingFrame::ID) {
+            _isPing = true;
         }
     }
 
