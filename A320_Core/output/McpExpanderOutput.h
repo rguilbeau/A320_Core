@@ -1,5 +1,5 @@
-#ifndef A320_MCP_EXPANDER_OUTPUT_H
-#define A320_MCP_EXPANDER_OUTPUT_H
+#ifndef A320_CORE_MCP_EXPANDER_OUTPUT_H
+#define A320_CORE_MCP_EXPANDER_OUTPUT_H
 
 #include "Arduino.h"
 #include "A320_Core/output/OutputInterface.h"

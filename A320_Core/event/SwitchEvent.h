@@ -1,5 +1,5 @@
-#ifndef A320_SWITCH_EVENT_H
-#define A320_SWITCH_EVENT_H
+#ifndef A320_CORE_SWITCH_EVENT_H
+#define A320_CORE_SWITCH_EVENT_H
 
 #include "Arduino.h"
 

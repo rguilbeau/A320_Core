@@ -1,5 +1,5 @@
-#ifndef A320_BUTTON_H
-#define A320_BUTTON_H
+#ifndef A320_CORE_BUTTON_H
+#define A320_CORE_BUTTON_H
 
 #include "Arduino.h"
 #include "A320_Core/ihm/IhmInterface.h"

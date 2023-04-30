@@ -1,5 +1,5 @@
-#ifndef A320_ROTARY_H
-#define A320_ROTARY_H
+#ifndef A320_CORE_ROTARY_H
+#define A320_CORE_ROTARY_H
 
 #include "Arduino.h"
 #include "A320_Core/input/InputInterface.h"

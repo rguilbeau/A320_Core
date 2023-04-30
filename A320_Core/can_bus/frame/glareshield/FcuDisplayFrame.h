@@ -1,5 +1,5 @@
-#ifndef FCU_DISPLAY_FRAME
-#define FCU_DISPLAY_FRAME
+#ifndef A320_CORE_FCU_DISPLAY_FRAME_H
+#define A320_CORE_FCU_DISPLAY_FRAME_H
 
 #include "Arduino.h"
 #include "A320_Core/can_bus/Frame.h"

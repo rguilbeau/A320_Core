@@ -1,5 +1,5 @@
-#ifndef A320_CAN_BUS_H
-#define A320_CAN_BUS_H
+#ifndef A320_CORE_CAN_BUS_H
+#define A320_CORE_CAN_BUS_H
 
 #include "Arduino.h"
 #include "Adafruit_BusIO_Register.h"

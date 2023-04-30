@@ -1,5 +1,5 @@
-#ifndef A320_BUTTON_EVENT_H
-#define A320_BUTTON_EVENT_H
+#ifndef A320_CORE_BUTTON_EVENT_H
+#define A320_CORE_BUTTON_EVENT_H
 
 #include "Arduino.h"
 

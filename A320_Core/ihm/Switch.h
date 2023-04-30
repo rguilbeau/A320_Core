@@ -1,5 +1,5 @@
-#ifndef A320_SWITCH_H
-#define A320_SWITCH_H
+#ifndef A320_CORE_SWITCH_H
+#define A320_CORE_SWITCH_H
 
 #include "Arduino.h"
 #include "A320_Core/input/InputInterface.h"

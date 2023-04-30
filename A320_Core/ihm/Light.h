@@ -1,5 +1,5 @@
-#ifndef A320_LIGHT_H
-#define A320_LIGHT_H
+#ifndef A320_CORE_LIGHT_H
+#define A320_CORE_LIGHT_H
 
 #include "Arduino.h"
 #include "A320_Core/output/OutputInterface.h"

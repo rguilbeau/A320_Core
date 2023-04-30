@@ -1,5 +1,5 @@
-#ifndef A320_PWM_INTERAFCE_H
-#define A320_PWM_INTERAFCE_H
+#ifndef A320_CORE_PWM_INTERAFCE_H
+#define A320_CORE_PWM_INTERAFCE_H
 
 #include "Arduino.h"
 

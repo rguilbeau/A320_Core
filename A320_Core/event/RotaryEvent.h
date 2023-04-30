@@ -1,5 +1,5 @@
-#ifndef A320_ROTARY_EVENT_H
-#define A320_ROTARY_EVENT_H
+#ifndef A320_CORE_ROTARY_EVENT_H
+#define A320_CORE_ROTARY_EVENT_H
 
 #include "Arduino.h"
 

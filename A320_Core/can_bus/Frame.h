@@ -1,5 +1,5 @@
-#ifndef FCU_CANBUS_FRAME_H
-#define FCU_CANBUS_FRAME_H
+#ifndef A320_CORE_CANBUS_FRAME_H
+#define A320_CORE_CANBUS_FRAME_H
 
 #include "Arduino.h"
 

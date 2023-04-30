@@ -1,5 +1,5 @@
-#ifndef A320_MCP_EXPANDER_H
-#define A320_MCP_EXPANDER_H
+#ifndef A320_CORE_MCP_EXPANDER_H
+#define A320_CORE_MCP_EXPANDER_H
 
 #include "Arduino.h"
 #include "Adafruit_MCP23X17.h"

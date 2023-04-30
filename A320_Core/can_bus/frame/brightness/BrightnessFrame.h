@@ -1,5 +1,5 @@
-#ifndef FCU_BRIGHTNESS_FRAME
-#define FCU_BRIGHTNESS_FRAME
+#ifndef A320_CORE_BRIGHTNESS_FRAME_H
+#define A320_CORE_BRIGHTNESS_FRAME_H
 
 #include "Arduino.h"
 #include "A320_Core/can_bus/Frame.h"

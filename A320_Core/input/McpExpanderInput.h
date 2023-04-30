@@ -1,5 +1,5 @@
-#ifndef A320_MCP_EXPANDER_INPUT_H
-#define A320_MCP_EXPANDER_INPUT_H
+#ifndef A320_CORE_MCP_EXPANDER_INPUT_H
+#define A320_CORE_MCP_EXPANDER_INPUT_H
 
 #include "Arduino.h"
 #include "A320_Core/input/InputInterface.h"
