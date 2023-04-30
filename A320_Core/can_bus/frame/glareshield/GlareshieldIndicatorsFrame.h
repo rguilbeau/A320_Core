@@ -7,7 +7,7 @@
 class GlareshieldIndicatorsFrame {
 
     public:
-        static const unsigned int ID = 0x102;
+        static const unsigned int ID = 0x021;
 
         GlareshieldIndicatorsFrame();
 

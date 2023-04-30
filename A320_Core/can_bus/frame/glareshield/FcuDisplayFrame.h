@@ -7,7 +7,7 @@
 class FcuDisplayFrame {
 
     public:
-        static const unsigned int ID = 0x101;
+        static const unsigned int ID = 0x011;
 
         FcuDisplayFrame();
 

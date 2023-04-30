@@ -7,7 +7,7 @@
 class BrightnessFrame {
 
     public:
-        static const unsigned int ID = 0x001;
+        static const unsigned int ID = 0x020;
 
         BrightnessFrame();
 
