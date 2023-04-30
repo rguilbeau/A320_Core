@@ -7,7 +7,7 @@
 class PingFrame {
 
     public:
-        static const unsigned int ID = 0xFFF;
+        static const unsigned int ID = 0x7FF;
 };
 
 #endif
