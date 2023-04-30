@@ -58,4 +58,5 @@ void FcuDisplayFrame::decode(Frame *frame)
     isHeadingDash = frame->getBinary(7, 1);
     isAltitudeDash = frame->getBinary(7, 2);
     isVerticalSpeedDash = frame->getBinary(7, 3);
+    isTestLight = frame->getBinary(7, 7);
 }
