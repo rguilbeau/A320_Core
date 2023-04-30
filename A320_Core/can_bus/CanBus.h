@@ -16,12 +16,14 @@ public:
 
     void send(Frame *frame);
     bool loop();
+    bool isPing();
     void sendEvent(unsigned short idEvent, float data);
 
 private:
     CanBusFrameEvent *_event;
     MCP2515 *_mcp2515;
     struct can_frame _mcp_can_frame;
+    bool _isPing;
 };
 
 #endif

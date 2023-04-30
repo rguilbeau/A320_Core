@@ -4,6 +4,7 @@ CanBus::CanBus(uint8_t cs, CanBusFrameEvent *event)
 {
     _mcp2515 = new MCP2515(cs);
     _event = event;
+    _isPing = false;
 }
 
 void CanBus::begin()
@@ -33,6 +34,7 @@ void CanBus::begin(const unsigned long *ids, const unsigned short numIds)
 bool CanBus::loop()
 {
     bool eventFired = false;
+    _isPing = false;
 
     MCP2515::ERROR error = _mcp2515->readMessage(&_mcp_can_frame);
 
@@ -44,20 +46,30 @@ bool CanBus::loop()
         // ERROR_FAILTX    = 4
         // ERROR_NOMSG     = 5
     } else if (error == MCP2515::ERROR_OK) {
-
-        Frame frame(_mcp_can_frame.can_id, _mcp_can_frame.can_dlc);
-    
-        for(unsigned short i = 0; i < _mcp_can_frame.can_dlc; i++) {
-            frame.setData(i, _mcp_can_frame.data[i]);
-        }
-
-        if(_event != nullptr) {
-            _event->frameReceived(&frame);
+        
+        if(_mcp_can_frame.can_id == 0xFFF) {
+            _isPing = true;
             eventFired = true;
+        } else {
+            Frame frame(_mcp_can_frame.can_id, _mcp_can_frame.can_dlc);
+
+            for(unsigned short i = 0; i < _mcp_can_frame.can_dlc; i++) {
+                frame.setData(i, _mcp_can_frame.data[i]);
+            }
+
+            if(_event != nullptr) {
+                _event->frameReceived(&frame);
+                eventFired = true;
+            }
         }
     }
 
     return eventFired;
+}
+
+bool CanBus::isPing()
+{
+    return _isPing;
 }
 
 void CanBus::send(Frame *frame)
