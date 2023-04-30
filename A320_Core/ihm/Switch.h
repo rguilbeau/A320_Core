@@ -13,6 +13,7 @@ class Switch : public IhmInterface {
         Switch(InputInterface *input, SwitchEvent *event);
 
         bool loop() override;
+        void ping() override;
 
     private:
         InputInterface *_input;

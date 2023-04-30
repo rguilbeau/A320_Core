@@ -67,3 +67,8 @@ bool Rotary::loop()
 
     return false;
 }
+
+void Rotary::ping()
+{
+    // do nothing
+}

@@ -7,6 +7,7 @@ class SwitchEvent {
 
 public:
     virtual void onChange(bool isOn) = 0;
+    virtual void onPing(bool isOn) = 0;
 };
 
 #endif

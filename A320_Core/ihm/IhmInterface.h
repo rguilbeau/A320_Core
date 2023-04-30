@@ -8,6 +8,7 @@ class IhmInterface {
 public:
 
     virtual bool loop() = 0;
+    virtual void ping() = 0;
 
 };
 

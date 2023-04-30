@@ -27,3 +27,8 @@ bool Button::loop()
         return false;
     }
 }
+
+bool Button::ping()
+{
+    // do notthing
+}

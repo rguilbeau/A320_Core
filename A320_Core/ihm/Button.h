@@ -13,6 +13,7 @@ class Button : public IhmInterface {
         Button(InputInterface *input, ButtonEvent *event);
 
         bool loop() override;
+        void ping() override;
 
     private:
         InputInterface *_input;

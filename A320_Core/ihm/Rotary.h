@@ -38,6 +38,7 @@ class Rotary : public IhmInterface {
         Rotary(InputInterface *inputA, InputInterface *inputB);
         Rotary(InputInterface *inputA, InputInterface *inputB, RotaryEvent *event);
         bool loop() override;
+        void ping() override;
 
     private:
         InputInterface *_inputA;

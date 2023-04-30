@@ -26,3 +26,10 @@ bool Switch::loop()
 
     return false;
 }
+
+void Switch::ping()
+{
+    if(_event != nullptr) {
+        _event->onPing(_lastValue);
+    }
+}
