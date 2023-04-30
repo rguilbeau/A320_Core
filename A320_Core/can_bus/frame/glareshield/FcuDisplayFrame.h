@@ -33,8 +33,6 @@ class FcuDisplayFrame {
         bool isHeadingDash;
         bool isAltitudeDash;
         bool isVerticalSpeedDash;
-
-        bool isTestLight;
 };
 
 #endif
