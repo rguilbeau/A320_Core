@@ -11,6 +11,7 @@ public:
     virtual ~SwitchEvent() = default;
 
     virtual void onChange(const bool &bIsOn) = 0;
+    virtual void onPing(const bool &bIsOn) = 0;
 };
 
 #endif

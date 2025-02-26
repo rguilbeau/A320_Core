@@ -1,29 +1,42 @@
 #include "switch.hpp"
 
-Switch::Switch(InputInterface *pInput)
+Switch::Switch(InputInterface *pInput, Ping *pPing)
 {
     m_pInput = pInput;
     m_bLastValue = false;
     m_pEvent = nullptr;
+    m_pPing = pPing;
 }
 
-Switch::Switch(InputInterface *pInput, SwitchEvent *pEvent)
+Switch::Switch(InputInterface *pInput, SwitchEvent *pEvent, Ping *pPing)
 {
     m_pInput = pInput;
     m_bLastValue = false;
     m_pEvent = pEvent;
+    m_pPing = pPing;
 }
 
 bool Switch::loop()
 {
-    bool bValue = m_pInput->read();
-    
-    if(m_bLastValue != bValue && m_pEvent != nullptr) 
+    if(m_pEvent != nullptr)
     {
-        m_bLastValue = bValue;
-        m_pEvent->onChange(m_bLastValue);
+        bool bValue = m_pInput->read();
+        
+        if(m_bLastValue != bValue) 
+        {
+            m_bLastValue = bValue;
+            m_pEvent->onChange(m_bLastValue);
 
-        return true;
+            return true;
+        }
+
+        if(m_pPing != nullptr)
+        {
+            if(m_pPing->isPing())
+            {
+                m_pEvent->onPing(bValue);
+            }
+        }
     }
 
     return false;
