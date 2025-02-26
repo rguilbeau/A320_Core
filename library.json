@@ -19,14 +19,18 @@
     ],
     "license": "MIT",
     "homepage": "",
-    "dependencies": {
+    "dependencies": 
+    {
+        "adafruit/Adafruit BusIO": "^1.17.0",
         "adafruit/Adafruit MCP23017 Arduino Library": "^2.3.0",
         "autowp/autowp-mcp2515": "^1.0.3"
     },
     "frameworks": "arduino",
     "platforms": "*",
-    "export": {
-        "include": [
+    "export": 
+    {
+        "include": 
+        [
             "*.h",
             "*/*.h",
             "*/*/*.h"
