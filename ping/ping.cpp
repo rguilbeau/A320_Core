@@ -9,7 +9,7 @@ bool Ping::isPing()
 {
     unsigned long nCurrenMillis = millis();
 
-    if((m_nLastMillis + m_nInterval) > nCurrenMillis)
+    if((nCurrenMillis - m_nLastMillis) >= m_nInterval) 
     {
         m_nLastMillis = nCurrenMillis;
         return true;
