@@ -59,7 +59,8 @@ bool CanBus::loop()
     } 
     else if (error == MCP2515::ERROR_OK) 
     {
-        Frame frame(m_mcpCanFrame.can_id, m_mcpCanFrame.can_dlc, m_mcpCanFrame.data);
+        e_frameId frameId = static_cast<e_frameId>(m_mcpCanFrame.can_id);
+        Frame frame(frameId, m_mcpCanFrame.can_dlc, m_mcpCanFrame.data);
 
         if(m_pEvent != nullptr) 
         {
