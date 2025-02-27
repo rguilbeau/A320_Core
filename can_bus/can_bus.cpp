@@ -12,6 +12,11 @@ CanBus::~CanBus()
     m_pMcp2515 = 0;
 }
 
+void CanBus::setCallback(CanBusFrameEvent *pEvent)
+{
+    m_pEvent = pEvent;
+}
+
 void CanBus::begin()
 {
     m_pMcp2515->reset();
@@ -66,7 +71,7 @@ bool CanBus::loop()
     return bEventFired;
 }
 
-void CanBus::send(const FrameEvent &frame)
+void CanBus::send(const Frame &frame)
 {
     struct can_frame canFrame;
     canFrame.can_id = frame.getId();

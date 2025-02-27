@@ -10,13 +10,15 @@
 class CanBus 
 {
 public:
-    explicit CanBus(const uint8_t &nCs, CanBusFrameEvent *pEvent);
+    explicit CanBus(const uint8_t &nCs, CanBusFrameEvent *pEvent = nullptr);
     virtual ~CanBus();
+
+    void setCallback(CanBusFrameEvent *pEvent);
 
     void begin();
     void begin(const uint32_t *ids, const uint16_t &nNumIds);
 
-    void send(const FrameEvent &frame);
+    void send(const Frame &frame);
     bool loop();
 
 private:
