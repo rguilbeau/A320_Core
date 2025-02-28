@@ -20,14 +20,14 @@ void CanBus::setCallback(CanBusFrameEvent *pEvent)
 void CanBus::begin()
 {
     m_pMcp2515->reset();
-    m_pMcp2515->setBitrate(CAN_125KBPS, MCP_8MHZ);
+    m_pMcp2515->setBitrate(CAN_1000KBPS, MCP_8MHZ);
     m_pMcp2515->setNormalMode();
 }
 
 void CanBus::begin(const uint32_t *ids, const uint16_t &nNumIds)
 {
     m_pMcp2515->reset();
-    m_pMcp2515->setBitrate(CAN_125KBPS, MCP_8MHZ);
+    m_pMcp2515->setBitrate(CAN_1000KBPS, MCP_8MHZ);
 
     m_pMcp2515->setConfigMode();
 
@@ -84,6 +84,5 @@ void CanBus::send(const Frame &frame)
     {
         canFrame.data[i] = data[i];
     } 
-
     m_pMcp2515->sendMessage(&canFrame);
 }
