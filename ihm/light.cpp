@@ -4,20 +4,37 @@ Light::Light(OutputInterface *pOutput)
 {
     m_pOutput = pOutput;
     m_bState = false;
+    m_bIsPowered = false;
+    m_bIsTestLight = false;
 }
 
 void Light::on(const bool &bIsOn)
 {
     m_bState = bIsOn;
-    m_pOutput->write(m_bState);
+
+    if(!m_bIsPowered)
+    {
+        m_pOutput->write(false);
+    }
+    else if(m_bIsTestLight)
+    {
+        m_pOutput->write(true);
+    }
+    else
+    {
+        m_pOutput->write(m_bState);
+    }
 }
 
-void Light::force(const bool &bIsOn)
+void Light::setTestLight(const bool &bIsTestLight)
 {
-    m_pOutput->write(bIsOn);
+    m_bIsTestLight = bIsTestLight;
+    on(m_bState);
 }
 
-void Light::disableForce()
+void Light::setPower(const bool &bIsPowered)
 {
-    m_pOutput->write(m_bState);
+    m_bIsPowered = bIsPowered;
+    on(m_bState);
 }
+

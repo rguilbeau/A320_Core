@@ -12,12 +12,14 @@ public:
     virtual ~Light() = default;
     
     void on(const bool &bIsOn);
-    void force(const bool &bIsOn);
-    void disableForce();
+    void setTestLight(const bool &bIsTestLight);
+    void setPower(const bool &bIsPowered);
 
 private:
     OutputInterface *m_pOutput;
     bool m_bState;
+    bool m_bIsTestLight;
+    bool m_bIsPowered;
 };
 
 #endif
