@@ -11,6 +11,7 @@ public:
     virtual ~PwmInterface() = default;
 
     virtual void write(const uint8_t &nValue) = 0;
+    virtual void setPower(const bool &bPower) = 0;
 };
 
 #endif

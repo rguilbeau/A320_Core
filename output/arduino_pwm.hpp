@@ -12,9 +12,12 @@ public:
     virtual ~ArduinoPwm() = default;
 
     void write(const uint8_t &nValue) override;
+    void setPower(const bool &bPower) override;
 
 private:
     uint8_t m_nPin;
+    uint8_t m_nValue = 0;
+    bool m_bIsPowered = false;
 };
 
 #endif
