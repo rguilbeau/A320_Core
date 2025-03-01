@@ -46,21 +46,13 @@ bool CanBus::loop()
 {
     bool bEventFired = false;
 
-    MCP2515::ERROR error = m_pMcp2515->readMessage(&m_mcpCanFrame);
-
-    if(error != MCP2515::ERROR_OK && error != MCP2515::ERROR_NOMSG) 
+    can_frame mcpCanFrame;
+   
+    while(m_pMcp2515->readMessage(&mcpCanFrame) == MCP2515::ERROR_OK)
     {
-        // ERROR_OK        = 0
-        // ERROR_FAIL      = 1
-        // ERROR_ALLTXBUSY = 2
-        // ERROR_FAILINIT  = 3
-        // ERROR_FAILTX    = 4
-        // ERROR_NOMSG     = 5
-    } 
-    else if (error == MCP2515::ERROR_OK) 
-    {
-        e_frameId frameId = static_cast<e_frameId>(m_mcpCanFrame.can_id);
-        Frame frame(frameId, m_mcpCanFrame.can_dlc, m_mcpCanFrame.data);
+        e_frameId frameId = static_cast<e_frameId>(mcpCanFrame.can_id);
+                
+        Frame frame(frameId, mcpCanFrame.can_dlc, mcpCanFrame.data);
 
         if(m_pEvent != nullptr) 
         {
